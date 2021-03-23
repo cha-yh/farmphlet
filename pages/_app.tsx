@@ -2,6 +2,8 @@ import '../styles/globals.css'
 
 import { AppProps } from 'next/app'
 import { createGlobalStyle } from 'styled-components'
+import Nav from '../components/Nav'
+import Footer from '../components/Footer'
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -16,7 +18,9 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <GlobalStyle />
+      <Nav />
       <Component {...pageProps} />
+      <Footer />
     </>
   )
 }
