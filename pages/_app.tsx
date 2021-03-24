@@ -10,7 +10,11 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background: #1F3326;
+    background: #07574C;
+  }
+
+  h1, h2, h3, h4, h5, p {
+    margin: 0;
   }
 `
 
