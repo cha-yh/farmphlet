@@ -131,6 +131,7 @@ const InfoCard = styled.div`
   >p {
     font-size: 14px;
     color: white;
+    margin-top: 20px;
   }
 `;
 
