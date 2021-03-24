@@ -43,6 +43,16 @@ export default function Home() {
             ))}
           </div>
         </InfoCardsSection>
+
+        <FarmphletCardsSection>
+          <h1>Farmphlets</h1>
+          <div>
+            {dummyFarmphlets.map(item => (
+              <FarmphletCard farmphlet={item} key={item.id}/>
+            ))}
+          </div>
+          <button>More Farmphlets</button>
+        </FarmphletCardsSection>
       </MainBlock>
     </ContainerBlock>
   )
@@ -121,5 +131,35 @@ const InfoCard = styled.div`
   >p {
     font-size: 14px;
     color: white;
+  }
+`;
+
+const FarmphletCardsSection = styled.section`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  >h1 {
+    font-size: 36px;
+    text-align: center;
+  }
+
+  >div {
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  >button {
+    height: 45px;
+    padding: 0 12px;
+    border: 1px solid white;
+    color: white;
+    background: none;
+    cursor: pointer;
+    &:hover {
+      color: gray;
+      border-color: gray;
+    }
   }
 `;
