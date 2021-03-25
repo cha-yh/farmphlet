@@ -4,6 +4,8 @@ import styled from 'styled-components';
 import FarmphletCard from '../components/FarmphletCard';
 import dummyFarmphlets from '../data/dummyFarmphlets';
 import styles from '../styles/Home.module.css'
+import Link from 'next/link';
+
 function useStateWithLabel(initialValue, name) {
   const [value, setValue] = useState(initialValue);
   useDebugValue(`${name}: ${value}`);
@@ -23,7 +25,10 @@ export default function Home() {
           <div className="contents">
             <h1>Introduce Your Farm,<br />Connect with Producers</h1>
             <p>당신의 농장을 세상에 알리세요. 모든 것은 free입니다.</p>
-            <button>Make a Farmphlet</button>
+            <Link href="/register-farmphlet">
+              Make a Farmphlet
+            </Link>
+            {/* <button></button> */}
           </div>
           <img src="/farm_girl.svg" alt="" />
         </HeroSection>
@@ -87,14 +92,14 @@ const HeroSection = styled.section`
       margin-top: 20px;
       margin-bottom: 40px;
     }
-    >button {
-      height: 46px;
+    >a {
+      /* height: 46px; */
       font-size: 16px;
       background: #4F7253;
       border: none;
       border-radius: 5px;
       color: white;
-      padding: 0 25px 0 25px;
+      padding: 10px 25px 10px 25px;
       cursor: pointer;
       &:hover {
         background: #466349;
