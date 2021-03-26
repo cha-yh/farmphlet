@@ -25,96 +25,107 @@ export const RegisterSection = styled.section`
     font-size: 14px;
     background: white;
     border-radius: 10px;
-    >h1 {
-        font-size: 36px;
-        font-weight: 700;
-        margin-bottom: 40px;
-    }
-    >form {
-        >.main__info {
-            display: flex;        
-            margin-bottom: 50px;
+    >.form-box {
+        >h1 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 40px;
+        }
+        >form {
 
-            >.main__inputs {
+            >.input-box {
                 display: flex;
-                flex-direction: column;
-
-                >:nth-child(2) {
-                    margin: 15px 0;
-                }
-                >input {
-                    ${inputStyle}
+                flex-wrap: wrap;
+                justify-content: space-between;
+                >label {
+                    display: flex;
+                    flex-direction: column;
+                    
+                    margin-bottom: 30px;
+                    >input {
+                        ${inputStyle}
+                        width: 290px;
+                    }
                 }
             }
 
-            >.main__preview {
-                
-                /* height: 100%; 하니깐 자식의 크기로 높이가 정의됨 */ 
+            >.button-wrapper {
                 width: 100%;
+                margin-top: 40px;
                 display: flex;
-                justify-content: center;
-                align-items: center;
-                position: relative;
-                background: #ECECEC;
-                margin-left: 30px;
-                >.preview__label {
-                    position: absolute;
-                    top: 0; right: 0;
-                    background: #005C0F;
-                    color: white;
-                    padding: 2px;
+                justify-content: flex-end;
+                >:first-child {
+                    margin-right: 20px;
                 }
-                >.preview__box {
+                >button {
+                    ${buttonStyle}
+                }
+            }
+        }
+    }
+    >.farm__info {
+        >form {
+            
+            >.main__info {
+                display: flex;        
+                margin-bottom: 50px;
+
+                >.main__inputs {
+                    display: flex;
+                    flex-direction: column;
+
+                    >:nth-child(2) {
+                        margin: 15px 0;
+                    }
+                    >input {
+                        ${inputStyle}
+                    }
+                }
+
+                >.main__preview {
+                    
+                    /* height: 100%; 하니깐 자식의 크기로 높이가 정의됨 */ 
+                    width: 100%;
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    >img {
-                        width: 64px;
-                        height: 64px;
-                        margin-right: 20px;
+                    position: relative;
+                    background: #ECECEC;
+                    margin-left: 30px;
+                    >.preview__label {
+                        position: absolute;
+                        top: 0; right: 0;
+                        background: #005C0F;
+                        color: white;
+                        padding: 2px;
                     }
-                    >div {
-                        >h5 {
-                            font-weight: 700;
-                            font-size: 16px;
+                    >.preview__box {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        >img {
+                            width: 64px;
+                            height: 64px;
+                            margin-right: 20px;
                         }
-                        >p {
-                            color: #767676;
+                        >div {
+                            >h5 {
+                                font-weight: 700;
+                                font-size: 16px;
+                            }
+                            >p {
+                                color: #767676;
+                            }
                         }
                     }
+
                 }
-
-            }
-            
-        }
-
-        >.base__info {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            >label {
-                display: flex;
-                flex-direction: column;
                 
-                margin-bottom: 30px;
-                >input {
-                    ${inputStyle}
-                    width: 290px;
-                }
             }
-        }
 
-        >.button-wrapper {
-            width: 100%;
-            margin-top: 40px;
-            display: flex;
-            justify-content: flex-end;
-            >:first-child {
-                margin-right: 20px;
-            }
-            >button {
-                ${buttonStyle}
-            }
+            
+
+            
         }
     }
 `;
