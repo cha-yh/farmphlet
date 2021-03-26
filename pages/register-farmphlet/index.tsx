@@ -1,10 +1,9 @@
-import { useState } from "react";
-import styled from "styled-components";
 import { RegisterFarmphletMain, RegisterSection } from "../../styles/register-farmphlet";
+import { useRouter } from 'next/router'
 
 const RegisterFarmphlet = () => {
-    const [phase, setPhase] = useState(1);
-
+    const router = useRouter();
+    const phase = Number(router.query.phase);
     const cancel = () => {
         console.log('cancel')
     }
@@ -13,11 +12,12 @@ const RegisterFarmphlet = () => {
         console.log('submit');
     }
 
-    const goToNext = () => {
-        setPhase(phase + 1);
+    const goToNext = (e) => {
+        e.preventDefault();
+        router.push(`/register-farmphlet?phase=${phase+1}`, undefined, { shallow: true });
     }
     const goToPrev = () => {
-        setPhase(phase - 1);
+        router.push(`/register-farmphlet?phase=${phase-1}`, undefined, { shallow: true });
     }
     return (
         <RegisterFarmphletMain>

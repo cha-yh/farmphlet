@@ -25,7 +25,7 @@ export default function Home() {
           <div className="contents">
             <h1>Introduce Your Farm,<br />Connect with Producers</h1>
             <p>당신의 농장을 세상에 알리세요. 모든 것은 free입니다.</p>
-            <Link href="/register-farmphlet">
+            <Link href="/register-farmphlet?phase=1">
               Make a Farmphlet
             </Link>
             {/* <button></button> */}
