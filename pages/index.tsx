@@ -152,6 +152,7 @@ const FarmphletCardsSection = styled.section`
   >div {
     width: 100%;
     margin-top: 50px;
+    margin-bottom: 50px;
     display: flex;
     justify-content: space-between;
   }
@@ -164,8 +165,8 @@ const FarmphletCardsSection = styled.section`
     background: none;
     cursor: pointer;
     &:hover {
-      color: gray;
-      border-color: gray;
+      color: #00ffd9;
+      border-color: #00ffd9;
     }
   }
 `;
